@@ -32,3 +32,8 @@ li {
   *zoom:1; /*IE7*/
   margin-right:10px;
 }
+th {
+  padding-right: 100px;
+  padding-left: 50px;
+  align-content: center;
+}

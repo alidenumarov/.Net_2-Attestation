@@ -17,9 +17,9 @@ export default class PersonItem extends React.Component {
         if(this.state.isEditing) {
             return(
                 <form onSubmit={this.onSaveClick}>
-                    <input className="inputChange" type="text" ref="editName" defaultValue={name}/> <br />
-                    <input className="inputChange" type="text" ref="editCategory" defaultValue={category}/> <br />
-                    <input className="inputChange" type="text" ref="editMark" defaultValue={mark}/> <br /> <br />
+                    <input className="inputChange" type="text" ref="editName" defaultValue={name}/>
+                    <input className="inputChange" type="text" ref="editCategory" defaultValue={category}/>
+                    <input className="inputChange" type="text" ref="editMark" defaultValue={mark}/>
                     <hr /> 
                 </form>
             );
@@ -30,21 +30,19 @@ export default class PersonItem extends React.Component {
         if(this.state.isEditing) {
             return(
                 <td>
-                    <br /> <br /> <br />
                     <button className="bnSave" onClick={this.onSaveClick}>Save</button>
                 </td>
             );
         }
         return(
             <div>
-                {this.props.person.name} <br/>
-                {this.props.person.category} <br/>
-                {this.props.person.mark} <br />
+                <li>{this.props.person.name}|</li>
+                <li>{this.props.person.category}|</li>
+                <li>{this.props.person.mark} |</li>
                 <button className="removePerson" onClick={(e) => this.removePerson(this.props.id)}>Delete</button>
                 <button className="bnEdit" onClick={(e) => this.editPerson(this.props.id)}>Edit</button>                
             </div>
         );
-
     }
 
     onSaveClick() {

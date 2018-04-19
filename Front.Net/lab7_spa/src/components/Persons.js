@@ -20,7 +20,7 @@ class Person extends Component {
     fetch("http://localhost:60225/api/people/")
       .then(response => response.json())
       .then(data => this.setState({
-        persons: data 
+        persons: data
       }));
   }
 

@@ -17,5 +17,7 @@ namespace Lab7_SPA.Data
         {
             modelBuilder.Entity<Person>().ToTable("Person");
         }
+
+        public DbSet<Lab7_SPA.Models.Report> Report { get; set; }
     }
 }
